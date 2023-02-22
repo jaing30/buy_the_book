@@ -3,17 +3,17 @@ On your local machine, replace 'zm03bn07x5wf2337' with 'bookstore_db'
 **/
 
 -- Use JAWS_DB Database
-USE zm03bn07x5wf2337;
+USE bookstore_db;
 
 -- Create Table Author on DB
-CREATE TABLE `zm03bn07x5wf2337`.`Author` (
+CREATE TABLE `bookstore_db`.`Author` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `firstName` VARCHAR(45) NOT NULL,
   `lastName` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`));
 
 -- Create Table Book after Author because of FK constraint to Author Tbl
-CREATE TABLE `zm03bn07x5wf2337`.`Book` (
+CREATE TABLE `bookstore_db`.`Book` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(255) NOT NULL,
   `genre` VARCHAR(255) NOT NULL,
@@ -35,7 +35,7 @@ CREATE TABLE `zm03bn07x5wf2337`.`Book` (
 
 
 -- Create Table Cart
-CREATE TABLE `zm03bn07x5wf2337`.`Cart` (
+CREATE TABLE `bookstore_db`.`Cart` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `quantity` INT NOT NULL,
   `price` DECIMAL(13,2) NOT NULL,

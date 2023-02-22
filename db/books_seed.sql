@@ -1,5 +1,5 @@
 -- Use JAWS_DB
-USE zm03bn07x5wf2337;
+USE bookstore_db;
 
 /**
 on your local machine, use the following:
