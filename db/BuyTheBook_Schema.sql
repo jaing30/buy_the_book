@@ -30,7 +30,7 @@ CREATE TABLE `bookstore_db`.`Book` (
   INDEX `AuthorId_idx` (`AuthorId` ASC),
   CONSTRAINT `AuthorId`
     FOREIGN KEY (`AuthorId`)
-    REFERENCES `zm03bn07x5wf2337`.`Author` (`id`)
+    REFERENCES `bookstore_db`.`Author` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
