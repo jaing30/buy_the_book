@@ -1,12 +1,12 @@
 /**
-On your local machine, replace 'zm03bn07x5wf2337' with 'bookstore_db'
+On your local machine, replace 'zm03bn07x5wf2337' with 'MyDatabase'
 **/
 
 -- Use JAWS_DB Database
-USE bookstore_db;
+USE MyDatabase;
 
 -- Create Table Author on DB
-CREATE TABLE `bookstore_db`.`Author` (
+CREATE TABLE `MyDatabase`.`Author` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `firstName` VARCHAR(45) NOT NULL,
   `lastName` VARCHAR(45) NOT NULL,
@@ -15,7 +15,7 @@ CREATE TABLE `bookstore_db`.`Author` (
   PRIMARY KEY (`id`));
 
 -- Create Table Book after Author because of FK constraint to Author Tbl
-CREATE TABLE `bookstore_db`.`Book` (
+CREATE TABLE `MyDatabase`.`Book` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(255) NOT NULL,
   `genre` VARCHAR(255) NOT NULL,
@@ -30,14 +30,14 @@ CREATE TABLE `bookstore_db`.`Book` (
   INDEX `AuthorId_idx` (`AuthorId` ASC),
   CONSTRAINT `AuthorId`
     FOREIGN KEY (`AuthorId`)
-    REFERENCES `bookstore_db`.`Author` (`id`)
+    REFERENCES `MyDatabase`.`Author` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
 
 
 -- Create Table Cart
-CREATE TABLE `bookstore_db`.`Cart` (
+CREATE TABLE `MyDatabase`.`Cart` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `quantity` INT NOT NULL,
   `price` DECIMAL(13,2) NOT NULL,

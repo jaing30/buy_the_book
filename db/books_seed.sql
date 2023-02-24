@@ -1,9 +1,9 @@
 -- Use JAWS_DB
-USE bookstore_db;
+USE MyDatabase;
 
 /**
 on your local machine, use the following:
-USE bookstore_db;
+USE MyDatabase;
 **/
 
 -- Insert Books into Book Table
